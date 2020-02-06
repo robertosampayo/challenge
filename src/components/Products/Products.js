@@ -1,10 +1,9 @@
 import React, { useState, useContext, useEffect, useRef, createRef   } from 'react';
 import './Products.css';
 import defaultImg from '../../assets/img/default.png';
-import { UserContext } from '../../UserProvider';
+import { UserContext } from '../../providers/UserProvider';
 
-import ProductsCard from '../../ProductsCard';
-import SuccessCard from '../../SuccessCard';
+import ProductsCard from '../ProductsCard/ProductsCard';
 
 import Img from 'react-image';
 
@@ -24,9 +23,6 @@ const axios = require('axios');
 
     const [showCard, setShowCard] = useState(false);
     const [productKey, setProductKey] = useState("");
-    const [showImage, setShowImage] = useState(false);
-    const [showDetails, setShowDetails] = useState(false);
-
 
 
      const [success, setSuccess] = useState(false);
@@ -54,10 +50,6 @@ const axios = require('axios');
 
     };
 
-    const imageLoaded = () =>{
-        console.log("image loaded");
-        setShowImage(true);
-    }
 
     function loadDefaultImage(){
 
@@ -68,7 +60,6 @@ const axios = require('axios');
 
 
 
-    //  const myImg = () => <Img src={defaultImg} />
 
     return (
 

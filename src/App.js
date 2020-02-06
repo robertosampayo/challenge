@@ -4,11 +4,10 @@ import Nav from './components/Nav/Nav';
 import Products from './components/Products/Products';
 import ItemsNumber from './ItemsNumber';
 import Banner from './Banner';
-import SuccessCard from './SuccessCard';
 
 
-import { UserProvider } from './UserProvider';
-import { ProductProvider } from './ProductProvider';
+import { UserProvider } from './providers/UserProvider';
+import { ProductProvider } from './providers/ProductProvider';
 
 
 
@@ -24,7 +23,7 @@ const App = (props) => {
 
           const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1ZTJiNjY4ODVjMmY5ODAwNmQ0YzQ4YjIiLCJpYXQiOjE1Nzk5MDI2MDB9.ur63hbTPSUo4-JsdQc7d9ldLFW-IGuJkSnRjm0mo2VE';
 
-          const pageLimit = 5;
+          const pageLimit = 10;
 
           const [filterActive, setFilterActive] = useState("recent");
 
@@ -52,14 +51,10 @@ const App = (props) => {
           }, []);
 
           useEffect(() => {
-            // setCurrentData(products.slice(offset, offset + pageLimit));
             var total = products.slice((currentPage * pageLimit) - pageLimit, currentPage * pageLimit);
             setCurrentData(total);
 
 
-            // const t1 = new TimelineLite({ paused: false });
-            // t1.set(document.getElementsByClassName('products__item'), { autoAlpha: 1, y: 0 });
-            // t1.staggerTo(document.getElementsByClassName('products__item'), 1, { autoAlpha: 0, y: -20 }, 0.1);
 
           }, [ currentPage, products]);
 
@@ -87,12 +82,10 @@ const App = (props) => {
 
               if (direction == 'next') {
 
-                // setPrevDisabled(false);
                 setAction("next");
 
                 if (numbersOfProducts > 0) {
                   setCurrentPage(currentPage + 1);
-                  // console.log(items);
                 }
 
 
@@ -119,7 +112,6 @@ const App = (props) => {
             if (action === "next") {
               var total = items + numbersOfProducts;
               setItems(total);
-              // console.log(total);
               if (total === products.length) {
                     setNextDisabled(true);
 
@@ -130,11 +122,9 @@ const App = (props) => {
             }
 
             if (action === "prev"){
-              // var total = items - numbersOfProducts;
               if( items <= pageLimit) {
                       setPrevDisabled(true);
                       setNextDisabled(false);
-                      // console.log(prevDisabled);
               }else{
                 setPrevDisabled(false);
                 setNextDisabled(false);
@@ -145,14 +135,10 @@ const App = (props) => {
             t2.set(document.getElementsByClassName('products__item'), { autoAlpha: 0, y: -20 });
             t2.staggerTo(document.getElementsByClassName('products__item'), 1, { autoAlpha: 1, y: 0 }, 0.1);
 
-            // setAnimateProduct(false);
 
           }, [currentData])
 
-          // useEffect(() => {
-          //   const tl = new TimelineLite({ paused: false });
-          //   tl.fromTo(document.getElementsByClassName('products__item')[0], 1, { autoAlpha: 0 },{ autoAlpha: 1}, 0.1);
-          // }, [])
+
 
 
 
@@ -175,7 +161,6 @@ const App = (props) => {
             setCurrentPage(1);
             setItems(pageLimit);
             setProducts(data);
-            // setPrevDisabled(true);
 
 
           }

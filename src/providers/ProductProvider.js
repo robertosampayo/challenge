@@ -1,5 +1,4 @@
 import React, { useState, createContext, useEffect } from 'react'
-import App from './App';
 
 const axios = require('axios');
 

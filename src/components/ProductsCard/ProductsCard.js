@@ -1,9 +1,8 @@
 import React, { useState, useContext, useEffect, Fragment } from 'react';
-import { getHighestPrice } from './components/Products/Products';
+import { getHighestPrice } from '../Products/Products';
 import './ProductsCard.css';
-import money from './assets/img/money.svg';
-import { UserContext } from './UserProvider';
-import SuccessCard from './SuccessCard';
+import money from '../../assets/img/money.svg';
+import { UserContext } from '../../providers/UserProvider';
 
 
 const axios = require('axios');
@@ -45,10 +44,6 @@ const ProductsCard = ({ product }) => {
                 setSuccess(true);
 
                 setRedeem(true);
-
-                // setTimeout(() => {
-                //     setSuccess(false);
-                // }, 1000);
 
 
 
@@ -115,7 +110,7 @@ const ProductsCard = ({ product }) => {
 
         { (user.points >= product.cost) &&
 
-                <div className= 'card__active card__item'    >
+                    <div className='card__active card__item' onClick={(e) => redeemProduct(e)}   >
 
                 { !redeem &&
 
@@ -123,7 +118,7 @@ const ProductsCard = ({ product }) => {
 
                             <div className="card__points"><h3>{product.cost} </h3> <img src={money}></img></div>
 
-                        <button onClick={(e) => redeemProduct(e)}>Reedem now</button>
+                        <button >Reedem now</button>
 
                     </div>
 

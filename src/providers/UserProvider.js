@@ -1,6 +1,4 @@
 import React, { useState, createContext, useEffect  } from 'react'
-import App from './App';
-import Nav from './components/Nav/Nav';
 
 const axios = require('axios');
 
@@ -40,8 +38,7 @@ export const UserProvider = props => {
 
         <UserContext.Provider value={[user, setUser]}>
             {props.children}
-            {/* <App/> */}
-            {/* <Nav/> */}
+
         </UserContext.Provider>
 
     );

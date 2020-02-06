@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from 'react';
-import { ProductContext } from './ProductProvider';
+import { ProductContext } from './providers/ProductProvider';
 
 const ItemsNumber = ({allItems, currentItems}) => {
 
