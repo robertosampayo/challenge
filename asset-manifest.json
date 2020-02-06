@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/challenge/static/css/main.f53b6ae4.chunk.css",
+    "main.js": "/challenge/static/js/main.1aba9a18.chunk.js",
+    "main.js.map": "/challenge/static/js/main.1aba9a18.chunk.js.map",
+    "runtime-main.js": "/challenge/static/js/runtime-main.e4ad4cda.js",
+    "runtime-main.js.map": "/challenge/static/js/runtime-main.e4ad4cda.js.map",
+    "static/js/2.37e8ccd6.chunk.js": "/challenge/static/js/2.37e8ccd6.chunk.js",
+    "static/js/2.37e8ccd6.chunk.js.map": "/challenge/static/js/2.37e8ccd6.chunk.js.map",
+    "index.html": "/challenge/index.html",
+    "precache-manifest.20ea2bf1b4123cac9f986013515fbe78.js": "/challenge/precache-manifest.20ea2bf1b4123cac9f986013515fbe78.js",
+    "service-worker.js": "/challenge/service-worker.js",
+    "static/css/main.f53b6ae4.chunk.css.map": "/challenge/static/css/main.f53b6ae4.chunk.css.map",
+    "static/js/2.37e8ccd6.chunk.js.LICENSE": "/challenge/static/js/2.37e8ccd6.chunk.js.LICENSE",
+    "static/media/App.css": "/challenge/static/media/banner.7cbdea2a.png",
+    "static/media/default.png": "/challenge/static/media/default.ed492c24.png",
+    "static/media/logo.svg": "/challenge/static/media/logo.77a82d5d.svg",
+    "static/media/money.svg": "/challenge/static/media/money.dec62e66.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.e4ad4cda.js",
+    "static/js/2.37e8ccd6.chunk.js",
+    "static/css/main.f53b6ae4.chunk.css",
+    "static/js/main.1aba9a18.chunk.js"
+  ]
+}
